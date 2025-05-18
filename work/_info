@@ -11,7 +11,7 @@ cModel Technology
 dD:/Ray_Universe/Computer_Architecture/ca2_ver2
 vcntr
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1747567423
+Z1 !s110 1747569867
 !i10b 1
 !s100 U[EW[1TSZL11TogLgQQ1V0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,13 +22,13 @@ Z4 dD:/Ray_Universe/Lab/DDS
 Z5 w1747567418
 Z6 8D:/Ray_Universe/Lab/DDS/message_process.sv
 Z7 FD:/Ray_Universe/Lab/DDS/message_process.sv
-!i122 221
+!i122 365
 L0 31 21
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1747567422.000000
+Z9 !s108 1747569867.000000
 Z10 !s107 D:/Ray_Universe/Lab/DDS/message_process.sv|
 Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Ray_Universe/Lab/DDS/message_process.sv|
 !i113 1
@@ -36,7 +36,7 @@ Z12 o-work work -sv
 Z13 tCvgOpt 0
 vcomp
 R0
-Z14 !s110 1747567422
+R1
 !i10b 1
 !s100 ciLRX=`NW3nf4AMP2I:643
 R2
@@ -44,24 +44,24 @@ IzWz84Jj]Dc0iB^5ERWDoB3
 R3
 S1
 R4
-Z15 w1746963436
-Z16 8D:/Ray_Universe/Lab/DDS/dds.sv
-Z17 FD:/Ray_Universe/Lab/DDS/dds.sv
-!i122 216
+Z14 w1746963436
+Z15 8D:/Ray_Universe/Lab/DDS/dds.sv
+Z16 FD:/Ray_Universe/Lab/DDS/dds.sv
+!i122 360
 L0 2 8
 R8
 r1
 !s85 0
 31
 R9
-Z18 !s107 D:/Ray_Universe/Lab/DDS/dds.sv|
-Z19 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Ray_Universe/Lab/DDS/dds.sv|
+Z17 !s107 D:/Ray_Universe/Lab/DDS/dds.sv|
+Z18 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Ray_Universe/Lab/DDS/dds.sv|
 !i113 1
 R12
 R13
 vcounter
 R0
-R14
+R1
 !i10b 1
 !s100 CY:_eom=mmXfE_?Fkb4hG2
 R2
@@ -69,24 +69,24 @@ IeMi>N_4em=7I;1:@JJ;MJ3
 R3
 S1
 R4
-Z20 w1747562936
-Z21 8D:/Ray_Universe/Lab/DDS/phase.sv
-Z22 FD:/Ray_Universe/Lab/DDS/phase.sv
-!i122 218
+Z19 w1747562936
+Z20 8D:/Ray_Universe/Lab/DDS/phase.sv
+Z21 FD:/Ray_Universe/Lab/DDS/phase.sv
+!i122 362
 L0 2 17
 R8
 r1
 !s85 0
 31
 R9
-Z23 !s107 D:/Ray_Universe/Lab/DDS/phase.sv|
-Z24 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Ray_Universe/Lab/DDS/phase.sv|
+Z22 !s107 D:/Ray_Universe/Lab/DDS/phase.sv|
+Z23 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Ray_Universe/Lab/DDS/phase.sv|
 !i113 1
 R12
 R13
 vdds
 R0
-R14
+R1
 !i10b 1
 !s100 PDK^oh70b0UgDFPiaK[K_2
 R2
@@ -94,24 +94,24 @@ ID^@mZ2HT1RG4iG9nkWG6b1
 R3
 S1
 R4
+R14
 R15
 R16
-R17
-!i122 216
+!i122 360
 L0 42 22
 R8
 r1
 !s85 0
 31
 R9
+R17
 R18
-R19
 !i113 1
 R12
 R13
 vdds_tb
 R0
-R14
+R1
 !i10b 1
 !s100 z?:jm[lG7[4S;d1z@X[H71
 R2
@@ -122,7 +122,7 @@ R4
 w1746963124
 8D:/Ray_Universe/Lab/DDS/dds_tb.sv
 FD:/Ray_Universe/Lab/DDS/dds_tb.sv
-!i122 217
+!i122 361
 L0 3 19
 R8
 r1
@@ -134,6 +134,58 @@ R9
 !i113 1
 R12
 R13
+vdownCounter
+R0
+Z24 !s110 1747569876
+!i10b 1
+!s100 b5amdLN5VhP3kMdi2ea@l3
+R2
+IiXPVl6cm9Jd7_aN_aD7Kk1
+R3
+S1
+R4
+Z25 w1747569845
+Z26 8D:/Ray_Universe/Lab/DDS/freqDivider.sv
+Z27 FD:/Ray_Universe/Lab/DDS/freqDivider.sv
+!i122 367
+L0 1 22
+R8
+r1
+!s85 0
+31
+Z28 !s108 1747569876.000000
+Z29 !s107 D:/Ray_Universe/Lab/DDS/freqDivider.sv|
+Z30 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Ray_Universe/Lab/DDS/freqDivider.sv|
+!i113 1
+R12
+R13
+ndown@counter
+vfreqDiv
+R0
+R24
+!i10b 1
+!s100 jjGa@=inE@=z3AIKm]Ez`3
+R2
+IoD=`mQIMT7B6adFz9QM`M1
+R3
+S1
+R4
+R25
+R26
+R27
+!i122 367
+L0 24 24
+R8
+r1
+!s85 0
+31
+R28
+R29
+R30
+!i113 1
+R12
+R13
+nfreq@div
 vmessageProcess_DP
 R0
 R1
@@ -147,7 +199,7 @@ R4
 R5
 R6
 R7
-!i122 221
+!i122 365
 L0 67 16
 R8
 r1
@@ -173,7 +225,7 @@ R4
 R5
 R6
 R7
-!i122 221
+!i122 365
 L0 84 53
 R8
 r1
@@ -188,7 +240,7 @@ R13
 nmessage@process_@f@s@m
 vmessageprocess_tb
 R0
-R1
+!s110 1747569870
 !i10b 1
 !s100 =2mgU<gC>?h=2W1dPf@b>2
 R2
@@ -199,13 +251,13 @@ R4
 w1747567145
 8D:/Ray_Universe/Lab/DDS/message_process_TB.sv
 FD:/Ray_Universe/Lab/DDS/message_process_TB.sv
-!i122 222
+!i122 366
 L0 3 27
 R8
 r1
 !s85 0
 31
-!s108 1747567423.000000
+!s108 1747569870.000000
 !s107 D:/Ray_Universe/Lab/DDS/message_process_TB.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Ray_Universe/Lab/DDS/message_process_TB.sv|
 !i113 1
@@ -224,7 +276,7 @@ R4
 R5
 R6
 R7
-!i122 221
+!i122 365
 L0 54 12
 R8
 r1
@@ -239,7 +291,7 @@ R13
 nmessage@process_@t@o@p
 vmux
 R0
-R14
+R1
 !i10b 1
 !s100 3KJ[0>z7F2z^F=5el^J7b3
 R2
@@ -247,24 +299,24 @@ IGlDkhzW;_Ym5OnA1WmH=02
 R3
 S1
 R4
+R14
 R15
 R16
-R17
-!i122 216
+!i122 360
 L0 11 10
 R8
 r1
 !s85 0
 31
 R9
+R17
 R18
-R19
 !i113 1
 R12
 R13
 vphase_FSM
 R0
-R14
+R1
 !i10b 1
 !s100 C[4nQ^o=nCbDHV?h00Cca0
 R2
@@ -272,25 +324,25 @@ IZ0:XC?cbY?3fig@^0^eO_0
 R3
 S1
 R4
+R19
 R20
 R21
-R22
-!i122 218
+!i122 362
 L0 32 75
 R8
 r1
 !s85 0
 31
 R9
+R22
 R23
-R24
 !i113 1
 R12
 R13
 nphase_@f@s@m
 vphase_Top
 R0
-R14
+R1
 !i10b 1
 !s100 J[32ncJ1K]4>4IeOgk59V3
 R2
@@ -298,25 +350,25 @@ IkhJm[EZgQY6[]<RITTTgV3
 R3
 S1
 R4
+R19
 R20
 R21
-R22
-!i122 218
+!i122 362
 L0 19 11
 R8
 r1
 !s85 0
 31
 R9
+R22
 R23
-R24
 !i113 1
 R12
 R13
 nphase_@top
 vpwm
 R0
-R14
+R1
 !i10b 1
 !s100 mP9RLV9JEe>:IOYEH6k`C2
 R2
@@ -327,7 +379,7 @@ R4
 w1746964575
 8D:/Ray_Universe/Lab/DDS/pwm.sv
 FD:/Ray_Universe/Lab/DDS/pwm.sv
-!i122 219
+!i122 363
 L0 1 10
 R8
 r1
@@ -341,7 +393,7 @@ R12
 R13
 vpwm_tb
 R0
-R14
+R1
 !i10b 1
 !s100 :TNV[S5@<DM@8NUh=>ae71
 R2
@@ -352,7 +404,7 @@ R4
 w1747567135
 8D:/Ray_Universe/Lab/DDS/pwm_tb.sv
 FD:/Ray_Universe/Lab/DDS/pwm_tb.sv
-!i122 220
+!i122 364
 L0 3 21
 R8
 r1
@@ -366,7 +418,7 @@ R12
 R13
 vROM
 R0
-R14
+R1
 !i10b 1
 !s100 UOEVg92^mSRLCWNE5iUJB0
 R2
@@ -374,18 +426,18 @@ Iz9K1Ken2@M_2L@3D8DB_K2
 R3
 S1
 R4
+R14
 R15
 R16
-R17
-!i122 216
+!i122 360
 L0 30 12
 R8
 r1
 !s85 0
 31
 R9
+R17
 R18
-R19
 !i113 1
 R12
 R13
@@ -403,7 +455,7 @@ R4
 R5
 R6
 R7
-!i122 221
+!i122 365
 L0 3 26
 R8
 r1
@@ -417,7 +469,7 @@ R12
 R13
 vSignToComp
 R0
-R14
+R1
 !i10b 1
 !s100 cLj`8VGd]2RzEK6elZDP:2
 R2
@@ -425,19 +477,69 @@ I4lJjgmfza@z_b9?PC5V=<1
 R3
 S1
 R4
+R14
 R15
 R16
-R17
-!i122 216
+!i122 360
 L0 21 9
 R8
 r1
 !s85 0
 31
 R9
+R17
 R18
-R19
 !i113 1
 R12
 R13
 n@sign@to@comp
+vtop
+R0
+!s110 1747569884
+!i10b 1
+!s100 <f;liM;iZiCZS@EFOA1;<1
+R2
+I]`]Gf;O8djDmV9j8ChT6@1
+R3
+S1
+R4
+w1747568679
+8D:/Ray_Universe/Lab/DDS/top.sv
+FD:/Ray_Universe/Lab/DDS/top.sv
+!i122 368
+L0 1 26
+R8
+r1
+!s85 0
+31
+!s108 1747569884.000000
+!s107 D:/Ray_Universe/Lab/DDS/top.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Ray_Universe/Lab/DDS/top.sv|
+!i113 1
+R12
+R13
+vtop_tb
+R0
+!s110 1747569885
+!i10b 1
+!s100 no<NDUDMn`<;VSS@g3M]`0
+R2
+IUnmki`[QXjOaf<OKbenI]0
+R3
+S1
+R4
+w1747568823
+8D:/Ray_Universe/Lab/DDS/top_tb.sv
+FD:/Ray_Universe/Lab/DDS/top_tb.sv
+!i122 369
+L0 3 30
+R8
+r1
+!s85 0
+31
+!s108 1747569885.000000
+!s107 D:/Ray_Universe/Lab/DDS/top_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Ray_Universe/Lab/DDS/top_tb.sv|
+!i113 1
+R12
+R13

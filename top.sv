@@ -4,7 +4,8 @@ module top(
     input send, 
     input [2:0] cnt,
     input [4:0] msg,
-    input mode
+    input mode,
+    output out
 
 );
     wire freq_one, freq_half;

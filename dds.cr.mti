@@ -1,9 +1,10 @@
-D:/Ray_Universe/Lab/DDS/pwm_tb.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/pwm_tb.sv
+D:/Ray_Universe/Lab/DDS/freqDivider.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/freqDivider.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module pwm_tb
+-- Compiling module downCounter
+-- Compiling module freqDiv
 
 Top level modules:
-	pwm_tb
+	freqDiv
 
 } {} {}} D:/Ray_Universe/Lab/DDS/phase.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/phase.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -13,6 +14,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	phase_Top
+
+} {} {}} D:/Ray_Universe/Lab/DDS/pwm_tb.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/pwm_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module pwm_tb
+
+Top level modules:
+	pwm_tb
 
 } {} {}} D:/Ray_Universe/Lab/DDS/dds.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/dds.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -25,12 +33,30 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	dds
 
-} {} {}} D:/Ray_Universe/Lab/DDS/message_process_TB.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/message_process_TB.sv
+} {} {}} D:/Ray_Universe/Lab/DDS/message_process.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/message_process.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module messageprocess_tb
+-- Compiling module shiftregister
+-- Compiling module cntr
+-- Compiling module messageProcess_TOP
+-- Compiling module messageProcess_DP
+-- Compiling module messageProcess_FSM
 
 Top level modules:
-	messageprocess_tb
+	messageProcess_TOP
+
+} {} {}} D:/Ray_Universe/Lab/DDS/top.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/top.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} D:/Ray_Universe/Lab/DDS/pwm.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/pwm.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module pwm
+
+Top level modules:
+	pwm
 
 } {} {}} D:/Ray_Universe/Lab/DDS/dds_tb.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/dds_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -39,11 +65,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	dds_tb
 
-} {} {}} D:/Ray_Universe/Lab/DDS/pwm.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/pwm.sv
+} {} {}} D:/Ray_Universe/Lab/DDS/message_process_TB.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/message_process_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module pwm
+-- Compiling module messageprocess_tb
 
 Top level modules:
-	pwm
+	messageprocess_tb
+
+} {} {}} D:/Ray_Universe/Lab/DDS/top_tb.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/top_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module top_tb
+
+Top level modules:
+	top_tb
 
 } {} {}}

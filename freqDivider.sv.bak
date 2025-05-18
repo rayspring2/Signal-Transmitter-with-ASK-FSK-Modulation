@@ -23,9 +23,7 @@ endmodule
 
 module freqDiv(clk, rst, load, msb, cnt, out);
 	parameter n = 9;
-	input clk;
-	input rst;
-	input load;
+	input clk, rst, load;
 	input [2:0] cnt;
 	input msb;
 	output logic out;
@@ -35,7 +33,7 @@ module freqDiv(clk, rst, load, msb, cnt, out);
 	downCounter #(n) count(clk, rst,{msb, cnt, 5'b0}, carry);
 	
 	
-	always @(posedge clk) begin
+`	always @(posedge clk) begin
 		if(rst || load)begin
 			out = 0;
 		end
