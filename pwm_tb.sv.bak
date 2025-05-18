@@ -7,7 +7,7 @@ module pwm_tb();
     pwm pwm(clk, rst, in, out);
     initial begin
 		clk = 0;
-		forever #5 clk = ~clk;
+		forever #2 clk = ~clk;
 	end
 
     initial begin
@@ -17,7 +17,7 @@ module pwm_tb();
         rst = 0;
 
 	
-	#10000 $stop;
+	#10000000 $stop;
     end
 
 endmodule

@@ -39,3 +39,524 @@ run -all
 # ** Note: $stop    : D:/Ray_Universe/Lab/DDS/dds_tb.sv(18)
 #    Time: 3105 ns  Iteration: 0  Instance: /dds_tb
 # Break in Module dds_tb at D:/Ray_Universe/Lab/DDS/dds_tb.sv line 18
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv failed with 1 errors.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv failed with 1 errors.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv failed with 1 errors.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv failed with 1 errors.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+restart
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv failed with 7 errors.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 1 failed with 7 errors.
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv failed with 4 errors.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 1 failed with 4 errors.
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv failed with 3 errors.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 1 failed with 3 errors.
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv failed with 1 errors.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.messageprocess_tb
+# End time: 14:34:06 on May 18,2025, Elapsed time: 1:13:24
+# Errors: 0, Warnings: 12
+# vsim -gui work.messageprocess_tb 
+# Start time: 14:34:06 on May 18,2025
+# Loading sv_std.std
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'shiftregister'.
+#    Time: 0 ps  Iteration: 0  Instance: /messageprocess_tb/messageProcess_TOP/messageProcess_DP File: D:/Ray_Universe/Lab/DDS/message_process.sv Line: 79
+# Loading work.messageProcess_FSM
+# Error loading design
+# End time: 14:34:07 on May 18,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.messageprocess_tb
+# vsim -gui work.messageprocess_tb 
+# Start time: 14:34:47 on May 18,2025
+# Loading sv_std.std
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'ld_data'. The port definition is at: D:/Ray_Universe/Lab/DDS/message_process.sv(31).
+#    Time: 0 ns  Iteration: 0  Instance: /messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter4 File: D:/Ray_Universe/Lab/DDS/message_process.sv Line: 76
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (32) for port 'ld_data'. The port definition is at: D:/Ray_Universe/Lab/DDS/message_process.sv(31).
+#    Time: 0 ns  Iteration: 0  Instance: /messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter10 File: D:/Ray_Universe/Lab/DDS/message_process.sv Line: 77
+add wave -position insertpoint  \
+sim:/messageprocess_tb/clk \
+sim:/messageprocess_tb/rst \
+sim:/messageprocess_tb/send \
+sim:/messageprocess_tb/msg \
+sim:/messageprocess_tb/SerOut
+# Error opening D:/Ray_Universe/Lab/DDS/(vsim-3015) [PCDPC] - Port size (4) does not match connection size 
+# Path name 'D:/Ray_Universe/Lab/DDS/(vsim-3015) [PCDPC] - Port size (4) does not match connection size ' doesn't exist.
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (32) for port 'ld_data'. The port definition is at: D:/Ray_Universe/Lab/DDS/message_process.sv(31).
+#    Time: 0 ns  Iteration: 0  Instance: /messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter10 File: D:/Ray_Universe/Lab/DDS/message_process.sv Line: 77
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (4) for port 'ld_data'. The port definition is at: D:/Ray_Universe/Lab/DDS/message_process.sv(31).
+#    Time: 0 ns  Iteration: 0  Instance: /messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter10 File: D:/Ray_Universe/Lab/DDS/message_process.sv Line: 77
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+# A time value could not be extracted from the current line
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (4) for port 'ld_data'. The port definition is at: D:/Ray_Universe/Lab/DDS/message_process.sv(31).
+#    Time: 0 ns  Iteration: 0  Instance: /messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter10 File: D:/Ray_Universe/Lab/DDS/message_process.sv Line: 77
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+# A time value could not be extracted from the current line
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+add wave -position end  sim:/messageprocess_tb/messageProcess_TOP/SerOut
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+add wave -position insertpoint  \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/n \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/clk \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/rst \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/ld \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/ld_data \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/shift \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/Serout \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/out \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/SerOut
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Warning in wave window restart: (vish-4014) No objects found matching '/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/Serout'. 
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+add wave -position insertpoint  \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/clk \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/rst \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/ldsh \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/msg \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/co4 \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/SerOut \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/co10 \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shift
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Warning in wave window restart: (vish-4014) No objects found matching '/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shift'. 
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+add wave -position insertpoint  \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/clk \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/rst \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/send \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/co4 \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/ld \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/ps \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/ns
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+add wave -position insertpoint  \
+sim:/messageprocess_tb/SerOut
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+add wave -position insertpoint  \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/shiftregister/out
+add wave -position insertpoint sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter10/*
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+restart
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+restart
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 10027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 1000027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+add watch \
+sim:/messageprocess_tb/SerOut 
+add wave -position insertpoint  \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter4/n \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter4/clk \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter4/rst \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter4/en \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter4/ld_data \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter4/carry \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/counter4/out
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 1000027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 1000027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26

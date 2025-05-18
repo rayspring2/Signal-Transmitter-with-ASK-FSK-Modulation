@@ -7,7 +7,7 @@ module shiftregister #(parameter n = 1) (
     input ld,
     input [n-1:0] ld_data,
     input shift,
-    output SerOut
+    output Serout
 ); 
 	
     logic [n-1:0]out;
@@ -23,7 +23,7 @@ module shiftregister #(parameter n = 1) (
         end
 		
 	end
-	assign SerOut = out[n-1];
+	assign SerOut = ld_data[n-1];
 
 endmodule
 
@@ -57,6 +57,7 @@ module messageProcess_TOP(
     input send,
     input [4:0] msg,
     output SerOut);
+    wire [4:0] msg;
     wire co4;
     wire ldsh;
     messageProcess_DP messageProcess_DP(clk, rst, ldsh, msg, co4, SerOut);
@@ -72,11 +73,11 @@ module messageProcess_DP(
     output co4,
     output SerOut);
 
-    wire co10;
-    cntr #(4) counter4(clk, rst, co10, 4'd5, co4); // conits for 9 times
-    cntr #(10) counter10(clk, rst, 1'b1, 10'd0, co10); 
+    
+    cntr #(4) counter4(clk, rst, co10, 5, co4); // conits for 9 times
+    cntr #(10) counter10(clk, rst, 1'b1, 0, co10); 
 
-    shiftregister #(9) shiftregister(clk, rst, ldsh, {4'b0101, msg}, co10,  SerOut);
+    shiftregister #(9) (clk, rst, ldsh, {4'b0101, msg}, shift,  Serout);
 
 
 endmodule
