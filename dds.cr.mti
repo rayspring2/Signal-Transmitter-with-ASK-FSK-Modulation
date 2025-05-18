@@ -1,0 +1,33 @@
+D:/Ray_Universe/Lab/DDS/pwm_tb.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/pwm_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module pwm_tb
+
+Top level modules:
+	pwm_tb
+
+} {} {}} D:/Ray_Universe/Lab/DDS/dds.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/dds.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module comp
+-- Compiling module mux
+-- Compiling module SignToComp
+-- Compiling module ROM
+-- Compiling module dds
+
+Top level modules:
+	dds
+
+} {} {}} D:/Ray_Universe/Lab/DDS/dds_tb.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/dds_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dds_tb
+
+Top level modules:
+	dds_tb
+
+} {} {}} D:/Ray_Universe/Lab/DDS/pwm.sv {1 {vlog -work work -sv -stats=none D:/Ray_Universe/Lab/DDS/pwm.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module pwm
+
+Top level modules:
+	pwm
+
+} {} {}}

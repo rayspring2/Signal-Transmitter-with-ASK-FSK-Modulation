@@ -1,0 +1,41 @@
+# Load canceled
+vsim -gui work.dds_tb
+# vsim -gui work.dds_tb 
+# Start time: 13:20:42 on May 18,2025
+# Loading sv_std.std
+# Loading work.dds_tb
+# Loading work.dds
+# Loading work.phase_Top
+# Loading work.counter
+# Loading work.phase_FSM
+# Loading work.comp
+# Loading work.mux
+# Loading work.ROM
+# Loading work.SignToComp
+add wave -position insertpoint  \
+sim:/dds_tb/clk \
+sim:/dds_tb/rst \
+sim:/dds_tb/out
+restart
+run -all
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/dds_tb.sv(18)
+#    Time: 3105 ns  Iteration: 0  Instance: /dds_tb
+# Break in Module dds_tb at D:/Ray_Universe/Lab/DDS/dds_tb.sv line 18
+add wave -position end  sim:/dds_tb/dd/phase/fsm/ps
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/dds_tb.sv(18)
+#    Time: 3105 ns  Iteration: 0  Instance: /dds_tb
+# Break in Module dds_tb at D:/Ray_Universe/Lab/DDS/dds_tb.sv line 18
+add wave -position end  sim:/dds_tb/dd/sinROM/in
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/dds_tb.sv(18)
+#    Time: 3105 ns  Iteration: 0  Instance: /dds_tb
+# Break in Module dds_tb at D:/Ray_Universe/Lab/DDS/dds_tb.sv line 18
