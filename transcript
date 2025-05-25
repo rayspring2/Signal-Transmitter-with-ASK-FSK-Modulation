@@ -1,57 +1,6 @@
-# Compile of dds.sv was successful.
-# Compile of dds_tb.sv was successful.
-# Compile of phase.sv was successful.
-# Compile of pwm.sv was successful.
-# Compile of pwm_tb.sv was successful.
-# Compile of message_process.sv was successful.
-# Compile of message_process_TB.sv was successful.
-# Compile of freqDivider.sv failed with 2 errors.
-# Compile of top.sv was successful.
-# Compile of top_tb.sv was successful.
-# 10 compiles, 1 failed with 2 errors.
-# Compile of dds.sv was successful.
-# Compile of dds_tb.sv was successful.
-# Compile of phase.sv was successful.
-# Compile of pwm.sv was successful.
-# Compile of pwm_tb.sv was successful.
-# Compile of message_process.sv was successful.
-# Compile of message_process_TB.sv was successful.
-# Compile of freqDivider.sv failed with 2 errors.
-# Compile of top.sv was successful.
-# Compile of top_tb.sv was successful.
-# 10 compiles, 1 failed with 2 errors.
-# Compile of dds.sv was successful.
-# Compile of dds_tb.sv was successful.
-# Compile of phase.sv was successful.
-# Compile of pwm.sv was successful.
-# Compile of pwm_tb.sv was successful.
-# Compile of message_process.sv was successful.
-# Compile of message_process_TB.sv was successful.
-# Compile of freqDivider.sv was successful.
-# Compile of top.sv was successful.
-# Compile of top_tb.sv was successful.
-# 10 compiles, 0 failed with no errors.
-# Compile of dds.sv was successful.
-# Compile of dds_tb.sv was successful.
-# Compile of phase.sv was successful.
-# Compile of pwm.sv was successful.
-# Compile of pwm_tb.sv was successful.
-# Compile of message_process.sv was successful.
-# Compile of message_process_TB.sv was successful.
-# Compile of freqDivider.sv was successful.
-# Compile of top.sv was successful.
-# Compile of top_tb.sv was successful.
-# 10 compiles, 0 failed with no errors.
-# Compile of dds.sv was successful.
-# Compile of dds_tb.sv was successful.
-# Compile of phase.sv was successful.
-# Compile of pwm.sv was successful.
-# Compile of pwm_tb.sv was successful.
-# Compile of message_process.sv was successful.
-# Compile of message_process_TB.sv was successful.
 vsim -gui work.top_tb
 # vsim -gui work.top_tb 
-# Start time: 15:34:36 on May 18,2025
+# Start time: 13:13:42 on May 25,2025
 # Loading sv_std.std
 # Loading work.top_tb
 # Loading work.top
@@ -75,23 +24,682 @@ vsim -gui work.top_tb
 #    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/dds File: D:/Ray_Universe/Lab/DDS/top.sv Line: 20
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'in'. The port definition is at: D:/Ray_Universe/Lab/DDS/pwm.sv(1).
 #    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/pwm File: D:/Ray_Universe/Lab/DDS/top.sv Line: 24
-# Compile of freqDivider.sv was successful.
-# Compile of top.sv was successful.
-# Compile of top_tb.sv was successful.
-# 10 compiles, 0 failed with no errors.
 add wave -position insertpoint  \
-sim:/top_tb/top/dds/out
+sim:/top_tb/clk \
+sim:/top_tb/rst \
+sim:/top_tb/send \
+sim:/top_tb/cnt \
+sim:/top_tb/msg \
+sim:/top_tb/mode \
+sim:/top_tb/out
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.top_tb
-# Loading work.top
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'out'. The port definition is at: D:/Ray_Universe/Lab/DDS/dds.sv(42).
 #    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/dds File: D:/Ray_Universe/Lab/DDS/top.sv Line: 20
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'in'. The port definition is at: D:/Ray_Universe/Lab/DDS/pwm.sv(1).
 #    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/pwm File: D:/Ray_Universe/Lab/DDS/top.sv Line: 24
 run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
 #    Time: 3107 ns  Iteration: 0  Instance: /top_tb
 # Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
-# End time: 15:35:29 on May 18,2025, Elapsed time: 0:00:53
+add wave -position insertpoint  \
+sim:/top_tb/top/clk \
+sim:/top_tb/top/rst \
+sim:/top_tb/top/send \
+sim:/top_tb/top/cnt \
+sim:/top_tb/top/msg \
+sim:/top_tb/top/mode \
+sim:/top_tb/top/out \
+sim:/top_tb/top/freq_one \
+sim:/top_tb/top/freq_half \
+sim:/top_tb/top/freq \
+sim:/top_tb/top/SerOut \
+sim:/top_tb/top/ddsout \
+sim:/top_tb/top/sel
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'out'. The port definition is at: D:/Ray_Universe/Lab/DDS/dds.sv(42).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/dds File: D:/Ray_Universe/Lab/DDS/top.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'in'. The port definition is at: D:/Ray_Universe/Lab/DDS/pwm.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/pwm File: D:/Ray_Universe/Lab/DDS/top.sv Line: 24
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 3107 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+add wave -position insertpoint  \
+sim:/top_tb/top/one/n \
+sim:/top_tb/top/one/clk \
+sim:/top_tb/top/one/rst \
+sim:/top_tb/top/one/load \
+sim:/top_tb/top/one/cnt \
+sim:/top_tb/top/one/msb \
+sim:/top_tb/top/one/out \
+sim:/top_tb/top/one/carry
+add wave -position insertpoint  \
+sim:/top_tb/top/one/out
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'out'. The port definition is at: D:/Ray_Universe/Lab/DDS/dds.sv(42).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/dds File: D:/Ray_Universe/Lab/DDS/top.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'in'. The port definition is at: D:/Ray_Universe/Lab/DDS/pwm.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/pwm File: D:/Ray_Universe/Lab/DDS/top.sv Line: 24
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 3107 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+add wave -position insertpoint  \
+sim:/top_tb/clk \
+sim:/top_tb/rst \
+sim:/top_tb/send \
+sim:/top_tb/cnt \
+sim:/top_tb/msg \
+sim:/top_tb/mode \
+sim:/top_tb/out
+add wave -position insertpoint  \
+sim:/top_tb/top/one/n \
+sim:/top_tb/top/one/clk \
+sim:/top_tb/top/one/rst \
+sim:/top_tb/top/one/load \
+sim:/top_tb/top/one/cnt \
+sim:/top_tb/top/one/msb \
+sim:/top_tb/top/one/out \
+sim:/top_tb/top/one/carry
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# Compile of freqDivider.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# 10 compiles, 0 failed with no errors.
+# Load canceled
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.freqDiv
+# Loading work.downCounter
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Loading work.dds
+# Loading work.phase_Top
+# Loading work.counter
+# Loading work.phase_FSM
+# Loading work.comp
+# Loading work.mux
+# Loading work.ROM
+# Loading work.SignToComp
+# Loading work.pwm
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'out'. The port definition is at: D:/Ray_Universe/Lab/DDS/dds.sv(42).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/dds File: D:/Ray_Universe/Lab/DDS/top.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'in'. The port definition is at: D:/Ray_Universe/Lab/DDS/pwm.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/pwm File: D:/Ray_Universe/Lab/DDS/top.sv Line: 24
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 3107 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+# WARNING: No extended dataflow license exists
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# Compile of freqDivider.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.freqDiv
+# Loading work.downCounter
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Loading work.dds
+# Loading work.phase_Top
+# Loading work.counter
+# Loading work.phase_FSM
+# Loading work.comp
+# Loading work.mux
+# Loading work.ROM
+# Loading work.SignToComp
+# Loading work.pwm
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'out'. The port definition is at: D:/Ray_Universe/Lab/DDS/dds.sv(42).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/dds File: D:/Ray_Universe/Lab/DDS/top.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'in'. The port definition is at: D:/Ray_Universe/Lab/DDS/pwm.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/pwm File: D:/Ray_Universe/Lab/DDS/top.sv Line: 24
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 3107 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# Compile of freqDivider.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.freqDiv
+# Loading work.downCounter
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Loading work.dds
+# Loading work.phase_Top
+# Loading work.counter
+# Loading work.phase_FSM
+# Loading work.comp
+# Loading work.mux
+# Loading work.ROM
+# Loading work.SignToComp
+# Loading work.pwm
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'out'. The port definition is at: D:/Ray_Universe/Lab/DDS/dds.sv(42).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/dds File: D:/Ray_Universe/Lab/DDS/top.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'in'. The port definition is at: D:/Ray_Universe/Lab/DDS/pwm.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/pwm File: D:/Ray_Universe/Lab/DDS/top.sv Line: 24
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 3107 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+add wave -position insertpoint  \
+sim:/top_tb/top/clk \
+sim:/top_tb/top/rst \
+sim:/top_tb/top/send \
+sim:/top_tb/top/cnt \
+sim:/top_tb/top/msg \
+sim:/top_tb/top/mode \
+sim:/top_tb/top/out \
+sim:/top_tb/top/freq_one \
+sim:/top_tb/top/freq_half \
+sim:/top_tb/top/freq \
+sim:/top_tb/top/SerOut \
+sim:/top_tb/top/ddsout \
+sim:/top_tb/top/sel
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# Compile of freqDivider.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# 10 compiles, 0 failed with no errors.
+add wave -position insertpoint  \
+sim:/top_tb/top/clk \
+sim:/top_tb/top/rst \
+sim:/top_tb/top/send \
+sim:/top_tb/top/cnt \
+sim:/top_tb/top/msg \
+sim:/top_tb/top/mode \
+sim:/top_tb/top/out \
+sim:/top_tb/top/freq_one \
+sim:/top_tb/top/freq_half \
+sim:/top_tb/top/freq \
+sim:/top_tb/top/SerOut \
+sim:/top_tb/top/ddsout \
+sim:/top_tb/top/sel
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# Compile of freqDivider.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.freqDiv
+# Loading work.downCounter
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Loading work.dds
+# Loading work.phase_Top
+# Loading work.counter
+# Loading work.phase_FSM
+# Loading work.comp
+# Loading work.mux
+# Loading work.ROM
+# Loading work.SignToComp
+# Loading work.pwm
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+add wave -position insertpoint  \
+sim:/top_tb/top/clk \
+sim:/top_tb/top/rst \
+sim:/top_tb/top/send \
+sim:/top_tb/top/cnt \
+sim:/top_tb/top/msg \
+sim:/top_tb/top/mode \
+sim:/top_tb/top/out \
+sim:/top_tb/top/freq_one \
+sim:/top_tb/top/freq_half \
+sim:/top_tb/top/freq \
+sim:/top_tb/top/SerOut \
+sim:/top_tb/top/ddsout \
+sim:/top_tb/top/sel \
+sim:/top_tb/top/pwm_input
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 3107 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# Compile of freqDivider.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.freqDiv
+# Loading work.downCounter
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Loading work.dds
+# Loading work.phase_Top
+# Loading work.counter
+# Loading work.phase_FSM
+# Loading work.comp
+# Loading work.mux
+# Loading work.ROM
+# Loading work.SignToComp
+# Loading work.pwm
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 1003007 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+add wave -position insertpoint  \
+sim:/top_tb/top/messageProcess_TOP/clk \
+sim:/top_tb/top/messageProcess_TOP/rst \
+sim:/top_tb/top/messageProcess_TOP/send \
+sim:/top_tb/top/messageProcess_TOP/msg \
+sim:/top_tb/top/messageProcess_TOP/SerOut \
+sim:/top_tb/top/messageProcess_TOP/co4 \
+sim:/top_tb/top/messageProcess_TOP/ldsh
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 1003007 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# Compile of freqDivider.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# 10 compiles, 0 failed with no errors.
+add wave -position insertpoint  \
+sim:/top_tb/top/messageProcess_TOP/clk \
+sim:/top_tb/top/messageProcess_TOP/rst \
+sim:/top_tb/top/messageProcess_TOP/send \
+sim:/top_tb/top/messageProcess_TOP/msg \
+sim:/top_tb/top/messageProcess_TOP/SerOut \
+sim:/top_tb/top/messageProcess_TOP/co4 \
+sim:/top_tb/top/messageProcess_TOP/ldsh
+add wave -position insertpoint  \
+sim:/top_tb/top/messageProcess_TOP/clk \
+sim:/top_tb/top/messageProcess_TOP/rst \
+sim:/top_tb/top/messageProcess_TOP/send \
+sim:/top_tb/top/messageProcess_TOP/msg \
+sim:/top_tb/top/messageProcess_TOP/SerOut \
+sim:/top_tb/top/messageProcess_TOP/co4 \
+sim:/top_tb/top/messageProcess_TOP/ldsh
+add wave -position insertpoint  \
+sim:/top_tb/top/messageProcess_TOP/messageProcess_DP/clk \
+sim:/top_tb/top/messageProcess_TOP/messageProcess_DP/rst \
+sim:/top_tb/top/messageProcess_TOP/messageProcess_DP/ldsh \
+sim:/top_tb/top/messageProcess_TOP/messageProcess_DP/msg \
+sim:/top_tb/top/messageProcess_TOP/messageProcess_DP/co4 \
+sim:/top_tb/top/messageProcess_TOP/messageProcess_DP/SerOut \
+sim:/top_tb/top/messageProcess_TOP/messageProcess_DP/co10
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.freqDiv
+# Loading work.downCounter
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Loading work.dds
+# Loading work.phase_Top
+# Loading work.counter
+# Loading work.phase_FSM
+# Loading work.comp
+# Loading work.mux
+# Loading work.ROM
+# Loading work.SignToComp
+# Loading work.pwm
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 1003007 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# Compile of freqDivider.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.freqDiv
+# Loading work.downCounter
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Loading work.dds
+# Loading work.phase_Top
+# Loading work.counter
+# Loading work.phase_FSM
+# Loading work.comp
+# Loading work.mux
+# Loading work.ROM
+# Loading work.SignToComp
+# Loading work.pwm
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+run -continue
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 10003007 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/top_tb.sv(29)
+#    Time: 10003007 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Ray_Universe/Lab/DDS/top_tb.sv line 29
+vsim -gui work.messageprocess_tb
+# End time: 14:05:52 on May 25,2025, Elapsed time: 0:52:10
 # Errors: 0, Warnings: 3
+# vsim -gui work.messageprocess_tb 
+# Start time: 14:05:52 on May 25,2025
+# Loading sv_std.std
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+add wave -position insertpoint  \
+sim:/messageprocess_tb/clk \
+sim:/messageprocess_tb/rst \
+sim:/messageprocess_tb/send \
+sim:/messageprocess_tb/msg \
+sim:/messageprocess_tb/SerOut
+restart
+run -all
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 1000027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+add wave -position insertpoint  \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/clk \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/rst \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/ldsh \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/msg \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/co4 \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/SerOut \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_DP/co10
+restart
+run -all
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 1000027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+add wave -position insertpoint  \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/clk \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/rst \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/send \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/co4 \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/ld \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/ps \
+sim:/messageprocess_tb/messageProcess_TOP/messageProcess_FSM/ns
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 1000027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# Compile of freqDivider.sv was successful.
+# Compile of top.sv was successful.
+# Compile of top_tb.sv was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.messageprocess_tb
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/Ray_Universe/Lab/DDS/message_process_TB.sv(26)
+#    Time: 1000027 ns  Iteration: 0  Instance: /messageprocess_tb
+# Break in Module messageprocess_tb at D:/Ray_Universe/Lab/DDS/message_process_TB.sv line 26
+vsim -gui work.top_tb
+# End time: 14:13:32 on May 25,2025, Elapsed time: 0:07:40
+# Errors: 0, Warnings: 1
+# vsim -gui work.top_tb 
+# Start time: 14:13:32 on May 25,2025
+# Loading sv_std.std
+# Loading work.top_tb
+# Loading work.top
+# Loading work.freqDiv
+# Loading work.downCounter
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Loading work.dds
+# Loading work.phase_Top
+# Loading work.counter
+# Loading work.phase_FSM
+# Loading work.comp
+# Loading work.mux
+# Loading work.ROM
+# Loading work.SignToComp
+# Loading work.pwm
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+add wave -position insertpoint  \
+sim:/top_tb/top/clk \
+sim:/top_tb/top/rst \
+sim:/top_tb/top/send \
+sim:/top_tb/top/cnt \
+sim:/top_tb/top/msg \
+sim:/top_tb/top/mode \
+sim:/top_tb/top/out \
+sim:/top_tb/top/freq_one \
+sim:/top_tb/top/freq_half \
+sim:/top_tb/top/freq \
+sim:/top_tb/top/SerOut \
+sim:/top_tb/top/ddsout \
+sim:/top_tb/top/sel \
+sim:/top_tb/top/pwm_input
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+run -all
+# Compile of dds.sv was successful.
+# Compile of dds_tb.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of pwm.sv was successful.
+# Compile of pwm_tb.sv was successful.
+# Compile of message_process.sv was successful.
+# Compile of message_process_TB.sv was successful.
+# Compile of freqDivider.sv was successful.
+# Compile of top.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.freqDiv
+# Loading work.downCounter
+# Loading work.messageProcess_TOP
+# Loading work.messageProcess_DP
+# Loading work.cntr
+# Loading work.shiftregister
+# Loading work.messageProcess_FSM
+# Loading work.dds
+# Loading work.phase_Top
+# Loading work.counter
+# Loading work.phase_FSM
+# Loading work.comp
+# Loading work.mux
+# Loading work.ROM
+# Loading work.SignToComp
+# Loading work.pwm
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/one File: D:/Ray_Universe/Lab/DDS/top.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: D:/Ray_Universe/Lab/DDS/freqDivider.sv(25).
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb/top/half File: D:/Ray_Universe/Lab/DDS/top.sv Line: 13
+# Compile of top_tb.sv was successful.
+# 10 compiles, 0 failed with no errors.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 

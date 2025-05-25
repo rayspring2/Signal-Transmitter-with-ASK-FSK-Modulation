@@ -9,18 +9,20 @@ module top(
 
 );
     wire freq_one, freq_half;
-    freqDiv one(clk, rst, send, 1'b1, cnt, freq_one);
-    freqDiv half(clk, rst, send, 1'b0, cnt, freq_half);
+    freqDiv one(clk, rst, 0, 1'b1, cnt, freq_one);
+    freqDiv half(clk, rst, 0, 1'b0, cnt, freq_half);
 
     wire freq;
     wire SerOut;
-    wire ddsout;
+    wire [7:0] ddsout;
     assign freq =  (SerOut) ? freq_one : freq_half;
     messageProcess_TOP messageProcess_TOP(freq_one, rst, send, msg, SerOut);
     dds dds(freq, rst, ddsout);
 
     wire sel;
     assign sel = mode| SerOut;
-    pwm pwm(clk, rst, (sel)? ddsout : 9'd0 , out);
+    wire [7:0] pwm_input;
+    assign pwm_input = (sel)? ddsout : 8'd128;
+    pwm pwm(clk, rst,  pwm_input, out);
 
 endmodule

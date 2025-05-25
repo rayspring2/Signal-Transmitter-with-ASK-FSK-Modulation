@@ -17,8 +17,9 @@ module downCounter(clk, rst, base, carry);
 				out = out - 1;
 			end
 		end
-		assign carry = &(~out);
 	end
+	assign carry = &(~out);
+
 endmodule
 
 module freqDiv(clk, rst, load, msb, cnt, out);
@@ -35,7 +36,7 @@ module freqDiv(clk, rst, load, msb, cnt, out);
 	downCounter #(n) count(clk, rst,{msb, cnt, 5'b0}, carry);
 	
 	
-	always @(posedge clk) begin
+	always @(posedge clk, posedge rst) begin
 		if(rst || load)begin
 			out = 0;
 		end

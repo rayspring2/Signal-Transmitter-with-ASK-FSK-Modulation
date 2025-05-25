@@ -38,7 +38,7 @@ module cntr(clk, rst, en, ld_data, carry);
 	logic [n-1:0] out;
 	always @(posedge clk, posedge rst) begin
 		if (rst) begin
-			out <= 0;
+			out <= ld_data;
 		end
         else if(carry) begin
             out <= ld_data;

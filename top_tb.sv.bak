@@ -17,7 +17,7 @@ module top_tb();
         rst = 1;
         msg = 5'b11010;
         cnt = 0;
-        mode = 1;
+        mode = 0;
         #5;
         rst = 0;
 
@@ -26,7 +26,7 @@ module top_tb();
 
 
 	#3000;
-	//#10000000 $stop;
+	#10000000 $stop;
     end
 
 endmodule
