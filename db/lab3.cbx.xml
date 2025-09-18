@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|LPM_FIFO:inst14|scfifo:myFIFO" CBX_FILE_NAME="scfifo_jc01.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

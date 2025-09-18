@@ -1,0 +1,17 @@
+module counter(clk, rst, out, carry);
+	parameter n = 1;
+	input clk, rst;
+	output reg [n-1:0] out;
+	output carry;
+	
+	always @(posedge clk, posedge rst) begin
+		if (rst) begin
+			out <= 0;
+			// carry <= 0;
+		end
+		else begin
+			out = out + 1;
+		end
+	end
+	assign carry = &out;
+endmodule

@@ -1,0 +1,859 @@
+|lab3
+out <= pwm:inst.out
+clock50 => pwm:inst.clk
+clock50 => freqDiv:inst3.clk
+clock50 => LPM_FIFO:inst14.clock
+clock50 => one_Pulser:inst16.clk
+clock50 => one_Pulser:inst15.clk
+clock50 => freqDiv:inst4.clk
+rst => inst10.IN0
+mode => inst5.IN0
+cnt[0] => freqDiv:inst3.cnt[0]
+cnt[0] => freqDiv:inst4.cnt[0]
+cnt[1] => freqDiv:inst3.cnt[1]
+cnt[1] => freqDiv:inst4.cnt[1]
+cnt[2] => freqDiv:inst3.cnt[2]
+cnt[2] => freqDiv:inst4.cnt[2]
+send => inst12.IN0
+read => inst19.IN0
+write => inst18.IN0
+msg[0] => LPM_FIFO:inst14.data[0]
+msg[1] => LPM_FIFO:inst14.data[1]
+msg[2] => LPM_FIFO:inst14.data[2]
+msg[3] => LPM_FIFO:inst14.data[3]
+msg[4] => LPM_FIFO:inst14.data[4]
+send_output <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|pwm:inst
+clk => clk.IN1
+rst => rst.IN1
+in[0] => LessThan0.IN8
+in[1] => LessThan0.IN7
+in[2] => LessThan0.IN6
+in[3] => LessThan0.IN5
+in[4] => LessThan0.IN4
+in[5] => LessThan0.IN3
+in[6] => LessThan0.IN2
+in[7] => LessThan0.IN1
+out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|pwm:inst|counter:c
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+clk => out[4]~reg0.CLK
+clk => out[5]~reg0.CLK
+clk => out[6]~reg0.CLK
+clk => out[7]~reg0.CLK
+rst => out[0]~reg0.ACLR
+rst => out[1]~reg0.ACLR
+rst => out[2]~reg0.ACLR
+rst => out[3]~reg0.ACLR
+rst => out[4]~reg0.ACLR
+rst => out[5]~reg0.ACLR
+rst => out[6]~reg0.ACLR
+rst => out[7]~reg0.ACLR
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|mux:inst6
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+in1[0] => out.DATAA
+in1[1] => out.DATAA
+in1[2] => out.DATAA
+in1[3] => out.DATAA
+in1[4] => out.DATAA
+in1[5] => out.DATAA
+in1[6] => out.DATAA
+in1[7] => out.DATAA
+in2[0] => out.DATAB
+in2[1] => out.DATAB
+in2[2] => out.DATAB
+in2[3] => out.DATAB
+in2[4] => out.DATAB
+in2[5] => out.DATAB
+in2[6] => out.DATAB
+in2[7] => out.DATAB
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|messageProcess_TOP:inst2
+clk => clk.IN2
+rst => rst.IN2
+send => send.IN1
+msg[0] => msg[0].IN1
+msg[1] => msg[1].IN1
+msg[2] => msg[2].IN1
+msg[3] => msg[3].IN1
+msg[4] => msg[4].IN1
+SerOut <= messageProcess_DP:messageProcess_DP.port5
+
+
+|lab3|messageProcess_TOP:inst2|messageProcess_DP:messageProcess_DP
+clk => clk.IN3
+rst => rst.IN3
+ldsh => ldsh.IN1
+msg[0] => msg[0].IN1
+msg[1] => msg[1].IN1
+msg[2] => msg[2].IN1
+msg[3] => msg[3].IN1
+msg[4] => msg[4].IN1
+co4 <= cntr:counter4.port4
+SerOut <= shiftregister:shiftregister.port5
+
+
+|lab3|messageProcess_TOP:inst2|messageProcess_DP:messageProcess_DP|cntr:counter4
+clk => out[0].CLK
+clk => out[1].CLK
+clk => out[2].CLK
+clk => out[3].CLK
+rst => out[0].ALOAD
+rst => out[1].ALOAD
+rst => out[2].ALOAD
+rst => out[3].ALOAD
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+ld_data[0] => out.DATAB
+ld_data[0] => out[0].ADATA
+ld_data[1] => out.DATAB
+ld_data[1] => out[1].ADATA
+ld_data[2] => out.DATAB
+ld_data[2] => out[2].ADATA
+ld_data[3] => out.DATAB
+ld_data[3] => out[3].ADATA
+carry <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|messageProcess_TOP:inst2|messageProcess_DP:messageProcess_DP|cntr:counter10
+clk => out[0].CLK
+clk => out[1].CLK
+clk => out[2].CLK
+clk => out[3].CLK
+clk => out[4].CLK
+clk => out[5].CLK
+clk => out[6].CLK
+clk => out[7].CLK
+clk => out[8].CLK
+clk => out[9].CLK
+rst => out[0].ALOAD
+rst => out[1].ALOAD
+rst => out[2].ALOAD
+rst => out[3].ALOAD
+rst => out[4].ALOAD
+rst => out[5].ALOAD
+rst => out[6].ALOAD
+rst => out[7].ALOAD
+rst => out[8].ALOAD
+rst => out[9].ALOAD
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+ld_data[0] => out.DATAB
+ld_data[0] => out[0].ADATA
+ld_data[1] => out.DATAB
+ld_data[1] => out[1].ADATA
+ld_data[2] => out.DATAB
+ld_data[2] => out[2].ADATA
+ld_data[3] => out.DATAB
+ld_data[3] => out[3].ADATA
+ld_data[4] => out.DATAB
+ld_data[4] => out[4].ADATA
+ld_data[5] => out.DATAB
+ld_data[5] => out[5].ADATA
+ld_data[6] => out.DATAB
+ld_data[6] => out[6].ADATA
+ld_data[7] => out.DATAB
+ld_data[7] => out[7].ADATA
+ld_data[8] => out.DATAB
+ld_data[8] => out[8].ADATA
+ld_data[9] => out.DATAB
+ld_data[9] => out[9].ADATA
+carry <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|messageProcess_TOP:inst2|messageProcess_DP:messageProcess_DP|shiftregister:shiftregister
+clk => out[0].CLK
+clk => out[1].CLK
+clk => out[2].CLK
+clk => out[3].CLK
+clk => out[4].CLK
+clk => out[5].CLK
+clk => out[6].CLK
+clk => out[7].CLK
+clk => out[8].CLK
+rst => out[0].ACLR
+rst => out[1].ACLR
+rst => out[2].ACLR
+rst => out[3].ACLR
+rst => out[4].ACLR
+rst => out[5].ACLR
+rst => out[6].ACLR
+rst => out[7].ACLR
+rst => out[8].ACLR
+ld => out.OUTPUTSELECT
+ld => out.OUTPUTSELECT
+ld => out.OUTPUTSELECT
+ld => out.OUTPUTSELECT
+ld => out.OUTPUTSELECT
+ld => out.OUTPUTSELECT
+ld => out.OUTPUTSELECT
+ld => out.OUTPUTSELECT
+ld => out.OUTPUTSELECT
+ld_data[0] => out.DATAB
+ld_data[1] => out.DATAB
+ld_data[2] => out.DATAB
+ld_data[3] => out.DATAB
+ld_data[4] => out.DATAB
+ld_data[5] => out.DATAB
+ld_data[6] => out.DATAB
+ld_data[7] => out.DATAB
+ld_data[8] => out.DATAB
+shift => out.OUTPUTSELECT
+shift => out.OUTPUTSELECT
+shift => out.OUTPUTSELECT
+shift => out.OUTPUTSELECT
+shift => out.OUTPUTSELECT
+shift => out.OUTPUTSELECT
+shift => out.OUTPUTSELECT
+shift => out.OUTPUTSELECT
+shift => out.OUTPUTSELECT
+SerOut <= out[8].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|messageProcess_TOP:inst2|messageProcess_FSM:messageProcess_FSM
+clk => ps~1.DATAIN
+rst => ps~3.DATAIN
+send => ns.B.DATAB
+send => ld.DATAB
+send => ns.A.DATAB
+co4 => ns.A.DATAA
+co4 => ns.B.DATAA
+ld <= ld.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|freqDiv:inst3
+clk => clk.IN1
+rst => rst.IN1
+load => ~NO_FANOUT~
+msb => msb.IN1
+cnt[0] => cnt[0].IN1
+cnt[1] => cnt[1].IN1
+cnt[2] => cnt[2].IN1
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|freqDiv:inst3|downCounter:count
+clk => out[0].CLK
+clk => out[1].CLK
+clk => out[2].CLK
+clk => out[3].CLK
+clk => out[4].CLK
+clk => out[5].CLK
+clk => out[6].CLK
+clk => out[7].CLK
+clk => out[8].CLK
+rst => out[0].ALOAD
+rst => out[1].ALOAD
+rst => out[2].ALOAD
+rst => out[3].ALOAD
+rst => out[4].ALOAD
+rst => out[5].ALOAD
+rst => out[6].ALOAD
+rst => out[7].ALOAD
+rst => out[8].ALOAD
+base[0] => Add0.IN18
+base[1] => Add0.IN17
+base[2] => Add0.IN16
+base[3] => Add0.IN15
+base[4] => Add0.IN14
+base[5] => Add0.IN13
+base[6] => Add0.IN12
+base[7] => Add0.IN11
+base[8] => Add0.IN10
+carry <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|zero:zero_module
+out <= <GND>
+
+
+|lab3|one:inst8
+out <= <VCC>
+
+
+|lab3|LPM_FIFO:inst14
+data[0] => scfifo:myFIFO.data[0]
+data[1] => scfifo:myFIFO.data[1]
+data[2] => scfifo:myFIFO.data[2]
+data[3] => scfifo:myFIFO.data[3]
+data[4] => scfifo:myFIFO.data[4]
+q[0] <= scfifo:myFIFO.q[0]
+q[1] <= scfifo:myFIFO.q[1]
+q[2] <= scfifo:myFIFO.q[2]
+q[3] <= scfifo:myFIFO.q[3]
+q[4] <= scfifo:myFIFO.q[4]
+clock => scfifo:myFIFO.clock
+rdreq => scfifo:myFIFO.rdreq
+wrreq => scfifo:myFIFO.wrreq
+sclr => scfifo:myFIFO.sclr
+aclr => ~NO_FANOUT~
+empty <= empty.DB_MAX_OUTPUT_PORT_TYPE
+full <= full.DB_MAX_OUTPUT_PORT_TYPE
+usedw[0] <= usedw[0].DB_MAX_OUTPUT_PORT_TYPE
+usedw[1] <= usedw[1].DB_MAX_OUTPUT_PORT_TYPE
+usedw[2] <= usedw[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|LPM_FIFO:inst14|scfifo:myFIFO
+data[0] => scfifo_jc01:auto_generated.data[0]
+data[1] => scfifo_jc01:auto_generated.data[1]
+data[2] => scfifo_jc01:auto_generated.data[2]
+data[3] => scfifo_jc01:auto_generated.data[3]
+data[4] => scfifo_jc01:auto_generated.data[4]
+q[0] <= scfifo_jc01:auto_generated.q[0]
+q[1] <= scfifo_jc01:auto_generated.q[1]
+q[2] <= scfifo_jc01:auto_generated.q[2]
+q[3] <= scfifo_jc01:auto_generated.q[3]
+q[4] <= scfifo_jc01:auto_generated.q[4]
+wrreq => scfifo_jc01:auto_generated.wrreq
+rdreq => scfifo_jc01:auto_generated.rdreq
+clock => scfifo_jc01:auto_generated.clock
+aclr => ~NO_FANOUT~
+sclr => scfifo_jc01:auto_generated.sclr
+empty <= scfifo_jc01:auto_generated.empty
+full <= scfifo_jc01:auto_generated.full
+almost_full <= <GND>
+almost_empty <= <GND>
+usedw[0] <= scfifo_jc01:auto_generated.usedw[0]
+usedw[1] <= scfifo_jc01:auto_generated.usedw[1]
+usedw[2] <= scfifo_jc01:auto_generated.usedw[2]
+
+
+|lab3|LPM_FIFO:inst14|scfifo:myFIFO|scfifo_jc01:auto_generated
+clock => a_dpfifo_g8t:dpfifo.clock
+data[0] => a_dpfifo_g8t:dpfifo.data[0]
+data[1] => a_dpfifo_g8t:dpfifo.data[1]
+data[2] => a_dpfifo_g8t:dpfifo.data[2]
+data[3] => a_dpfifo_g8t:dpfifo.data[3]
+data[4] => a_dpfifo_g8t:dpfifo.data[4]
+empty <= a_dpfifo_g8t:dpfifo.empty
+full <= a_dpfifo_g8t:dpfifo.full
+q[0] <= a_dpfifo_g8t:dpfifo.q[0]
+q[1] <= a_dpfifo_g8t:dpfifo.q[1]
+q[2] <= a_dpfifo_g8t:dpfifo.q[2]
+q[3] <= a_dpfifo_g8t:dpfifo.q[3]
+q[4] <= a_dpfifo_g8t:dpfifo.q[4]
+rdreq => a_dpfifo_g8t:dpfifo.rreq
+sclr => a_dpfifo_g8t:dpfifo.sclr
+usedw[0] <= a_dpfifo_g8t:dpfifo.usedw[0]
+usedw[1] <= a_dpfifo_g8t:dpfifo.usedw[1]
+usedw[2] <= a_dpfifo_g8t:dpfifo.usedw[2]
+wrreq => a_dpfifo_g8t:dpfifo.wreq
+
+
+|lab3|LPM_FIFO:inst14|scfifo:myFIFO|scfifo_jc01:auto_generated|a_dpfifo_g8t:dpfifo
+clock => a_fefifo_m4f:fifo_state.clock
+clock => dpram_tht:FIFOram.inclock
+clock => dpram_tht:FIFOram.outclock
+clock => cntr_cjb:rd_ptr_count.clock
+clock => cntr_cjb:wr_ptr.clock
+data[0] => dpram_tht:FIFOram.data[0]
+data[1] => dpram_tht:FIFOram.data[1]
+data[2] => dpram_tht:FIFOram.data[2]
+data[3] => dpram_tht:FIFOram.data[3]
+data[4] => dpram_tht:FIFOram.data[4]
+empty <= a_fefifo_m4f:fifo_state.empty
+full <= a_fefifo_m4f:fifo_state.full
+q[0] <= dpram_tht:FIFOram.q[0]
+q[1] <= dpram_tht:FIFOram.q[1]
+q[2] <= dpram_tht:FIFOram.q[2]
+q[3] <= dpram_tht:FIFOram.q[3]
+q[4] <= dpram_tht:FIFOram.q[4]
+rreq => a_fefifo_m4f:fifo_state.rreq
+rreq => valid_rreq.IN0
+sclr => a_fefifo_m4f:fifo_state.sclr
+sclr => _.IN1
+sclr => _.IN0
+sclr => cntr_cjb:rd_ptr_count.sclr
+sclr => cntr_cjb:wr_ptr.sclr
+usedw[0] <= a_fefifo_m4f:fifo_state.usedw_out[0]
+usedw[1] <= a_fefifo_m4f:fifo_state.usedw_out[1]
+usedw[2] <= a_fefifo_m4f:fifo_state.usedw_out[2]
+wreq => a_fefifo_m4f:fifo_state.wreq
+wreq => valid_wreq.IN0
+
+
+|lab3|LPM_FIFO:inst14|scfifo:myFIFO|scfifo_jc01:auto_generated|a_dpfifo_g8t:dpfifo|a_fefifo_m4f:fifo_state
+aclr => b_full.IN0
+aclr => b_non_empty.IN0
+aclr => cntr_oj7:count_usedw.aclr
+clock => cntr_oj7:count_usedw.clock
+clock => b_full.CLK
+clock => b_non_empty.CLK
+empty <= empty.DB_MAX_OUTPUT_PORT_TYPE
+full <= b_full.DB_MAX_OUTPUT_PORT_TYPE
+rreq => _.IN1
+rreq => _.IN0
+rreq => _.IN1
+rreq => valid_rreq.IN0
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => cntr_oj7:count_usedw.sclr
+usedw_out[0] <= usedw[0].DB_MAX_OUTPUT_PORT_TYPE
+usedw_out[1] <= usedw[1].DB_MAX_OUTPUT_PORT_TYPE
+usedw_out[2] <= usedw[2].DB_MAX_OUTPUT_PORT_TYPE
+wreq => _.IN1
+wreq => _.IN1
+wreq => _.IN0
+wreq => valid_wreq.IN0
+
+
+|lab3|LPM_FIFO:inst14|scfifo:myFIFO|scfifo_jc01:auto_generated|a_dpfifo_g8t:dpfifo|a_fefifo_m4f:fifo_state|cntr_oj7:count_usedw
+aclr => counter_reg_bit1a[2].ACLR
+aclr => counter_reg_bit1a[1].ACLR
+aclr => counter_reg_bit1a[0].ACLR
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+updown => counter_comb_bita0.DATAB
+updown => counter_comb_bita1.DATAB
+updown => counter_comb_bita2.DATAB
+
+
+|lab3|LPM_FIFO:inst14|scfifo:myFIFO|scfifo_jc01:auto_generated|a_dpfifo_g8t:dpfifo|dpram_tht:FIFOram
+data[0] => altsyncram_orj1:altsyncram2.data_a[0]
+data[1] => altsyncram_orj1:altsyncram2.data_a[1]
+data[2] => altsyncram_orj1:altsyncram2.data_a[2]
+data[3] => altsyncram_orj1:altsyncram2.data_a[3]
+data[4] => altsyncram_orj1:altsyncram2.data_a[4]
+inclock => altsyncram_orj1:altsyncram2.clock0
+outclock => altsyncram_orj1:altsyncram2.clock1
+outclocken => altsyncram_orj1:altsyncram2.clocken1
+q[0] <= altsyncram_orj1:altsyncram2.q_b[0]
+q[1] <= altsyncram_orj1:altsyncram2.q_b[1]
+q[2] <= altsyncram_orj1:altsyncram2.q_b[2]
+q[3] <= altsyncram_orj1:altsyncram2.q_b[3]
+q[4] <= altsyncram_orj1:altsyncram2.q_b[4]
+rdaddress[0] => altsyncram_orj1:altsyncram2.address_b[0]
+rdaddress[1] => altsyncram_orj1:altsyncram2.address_b[1]
+rdaddress[2] => altsyncram_orj1:altsyncram2.address_b[2]
+wraddress[0] => altsyncram_orj1:altsyncram2.address_a[0]
+wraddress[1] => altsyncram_orj1:altsyncram2.address_a[1]
+wraddress[2] => altsyncram_orj1:altsyncram2.address_a[2]
+wren => altsyncram_orj1:altsyncram2.wren_a
+
+
+|lab3|LPM_FIFO:inst14|scfifo:myFIFO|scfifo_jc01:auto_generated|a_dpfifo_g8t:dpfifo|dpram_tht:FIFOram|altsyncram_orj1:altsyncram2
+address_a[0] => ram_block3a0.PORTAADDR
+address_a[0] => ram_block3a1.PORTAADDR
+address_a[0] => ram_block3a2.PORTAADDR
+address_a[0] => ram_block3a3.PORTAADDR
+address_a[0] => ram_block3a4.PORTAADDR
+address_a[1] => ram_block3a0.PORTAADDR1
+address_a[1] => ram_block3a1.PORTAADDR1
+address_a[1] => ram_block3a2.PORTAADDR1
+address_a[1] => ram_block3a3.PORTAADDR1
+address_a[1] => ram_block3a4.PORTAADDR1
+address_a[2] => ram_block3a0.PORTAADDR2
+address_a[2] => ram_block3a1.PORTAADDR2
+address_a[2] => ram_block3a2.PORTAADDR2
+address_a[2] => ram_block3a3.PORTAADDR2
+address_a[2] => ram_block3a4.PORTAADDR2
+address_b[0] => ram_block3a0.PORTBADDR
+address_b[0] => ram_block3a1.PORTBADDR
+address_b[0] => ram_block3a2.PORTBADDR
+address_b[0] => ram_block3a3.PORTBADDR
+address_b[0] => ram_block3a4.PORTBADDR
+address_b[1] => ram_block3a0.PORTBADDR1
+address_b[1] => ram_block3a1.PORTBADDR1
+address_b[1] => ram_block3a2.PORTBADDR1
+address_b[1] => ram_block3a3.PORTBADDR1
+address_b[1] => ram_block3a4.PORTBADDR1
+address_b[2] => ram_block3a0.PORTBADDR2
+address_b[2] => ram_block3a1.PORTBADDR2
+address_b[2] => ram_block3a2.PORTBADDR2
+address_b[2] => ram_block3a3.PORTBADDR2
+address_b[2] => ram_block3a4.PORTBADDR2
+clock0 => ram_block3a0.CLK0
+clock0 => ram_block3a1.CLK0
+clock0 => ram_block3a2.CLK0
+clock0 => ram_block3a3.CLK0
+clock0 => ram_block3a4.CLK0
+clock1 => ram_block3a0.CLK1
+clock1 => ram_block3a1.CLK1
+clock1 => ram_block3a2.CLK1
+clock1 => ram_block3a3.CLK1
+clock1 => ram_block3a4.CLK1
+clocken1 => ram_block3a0.ENA1
+clocken1 => ram_block3a1.ENA1
+clocken1 => ram_block3a2.ENA1
+clocken1 => ram_block3a3.ENA1
+clocken1 => ram_block3a4.ENA1
+data_a[0] => ram_block3a0.PORTADATAIN
+data_a[1] => ram_block3a1.PORTADATAIN
+data_a[2] => ram_block3a2.PORTADATAIN
+data_a[3] => ram_block3a3.PORTADATAIN
+data_a[4] => ram_block3a4.PORTADATAIN
+q_b[0] <= ram_block3a0.PORTBDATAOUT
+q_b[1] <= ram_block3a1.PORTBDATAOUT
+q_b[2] <= ram_block3a2.PORTBDATAOUT
+q_b[3] <= ram_block3a3.PORTBDATAOUT
+q_b[4] <= ram_block3a4.PORTBDATAOUT
+wren_a => ram_block3a0.PORTAWE
+wren_a => ram_block3a0.ENA0
+wren_a => ram_block3a1.PORTAWE
+wren_a => ram_block3a1.ENA0
+wren_a => ram_block3a2.PORTAWE
+wren_a => ram_block3a2.ENA0
+wren_a => ram_block3a3.PORTAWE
+wren_a => ram_block3a3.ENA0
+wren_a => ram_block3a4.PORTAWE
+wren_a => ram_block3a4.ENA0
+
+
+|lab3|LPM_FIFO:inst14|scfifo:myFIFO|scfifo_jc01:auto_generated|a_dpfifo_g8t:dpfifo|cntr_cjb:rd_ptr_count
+aclr => counter_reg_bit4a[2].ACLR
+aclr => counter_reg_bit4a[1].ACLR
+aclr => counter_reg_bit4a[0].ACLR
+clock => counter_reg_bit4a[2].CLK
+clock => counter_reg_bit4a[1].CLK
+clock => counter_reg_bit4a[0].CLK
+cnt_en => _.IN1
+q[0] <= counter_reg_bit4a[0].REGOUT
+q[1] <= counter_reg_bit4a[1].REGOUT
+q[2] <= counter_reg_bit4a[2].REGOUT
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|lab3|LPM_FIFO:inst14|scfifo:myFIFO|scfifo_jc01:auto_generated|a_dpfifo_g8t:dpfifo|cntr_cjb:wr_ptr
+aclr => counter_reg_bit4a[2].ACLR
+aclr => counter_reg_bit4a[1].ACLR
+aclr => counter_reg_bit4a[0].ACLR
+clock => counter_reg_bit4a[2].CLK
+clock => counter_reg_bit4a[1].CLK
+clock => counter_reg_bit4a[0].CLK
+cnt_en => _.IN1
+q[0] <= counter_reg_bit4a[0].REGOUT
+q[1] <= counter_reg_bit4a[1].REGOUT
+q[2] <= counter_reg_bit4a[2].REGOUT
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|lab3|one_Pulser:inst16
+clk => ps~1.DATAIN
+rst => ps~3.DATAIN
+clk_PB => ns.B.DATAB
+clk_PB => Selector1.IN2
+clk_PB => Selector0.IN1
+clk_EN <= clk_EN.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|one_Pulser:inst15
+clk => ps~1.DATAIN
+rst => ps~3.DATAIN
+clk_PB => ns.B.DATAB
+clk_PB => Selector1.IN2
+clk_PB => Selector0.IN1
+clk_EN <= clk_EN.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|m128:inst9
+out[0] <= <GND>
+out[1] <= <GND>
+out[2] <= <GND>
+out[3] <= <GND>
+out[4] <= <GND>
+out[5] <= <GND>
+out[6] <= <GND>
+out[7] <= <VCC>
+
+
+|lab3|dds:inst1
+clk => clk.IN1
+rst => rst.IN1
+out[0] <= SignToComp:scmp.port2
+out[1] <= SignToComp:scmp.port2
+out[2] <= SignToComp:scmp.port2
+out[3] <= SignToComp:scmp.port2
+out[4] <= SignToComp:scmp.port2
+out[5] <= SignToComp:scmp.port2
+out[6] <= SignToComp:scmp.port2
+out[7] <= SignToComp:scmp.port2
+
+
+|lab3|dds:inst1|phase_Top:phase
+clk => clk.IN2
+rst => rst.IN2
+cnt[0] <= counter:c.port2
+cnt[1] <= counter:c.port2
+cnt[2] <= counter:c.port2
+cnt[3] <= counter:c.port2
+cnt[4] <= counter:c.port2
+cnt[5] <= counter:c.port2
+p <= phase_FSM:fsm.port3
+s <= phase_FSM:fsm.port4
+
+
+|lab3|dds:inst1|phase_Top:phase|counter:c
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+clk => out[4]~reg0.CLK
+clk => out[5]~reg0.CLK
+rst => out[0]~reg0.ACLR
+rst => out[1]~reg0.ACLR
+rst => out[2]~reg0.ACLR
+rst => out[3]~reg0.ACLR
+rst => out[4]~reg0.ACLR
+rst => out[5]~reg0.ACLR
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|dds:inst1|phase_Top:phase|phase_FSM:fsm
+clk => ps~1.DATAIN
+rst => ps~3.DATAIN
+carry => Selector1.IN3
+carry => Selector2.IN3
+carry => Selector3.IN3
+carry => Selector0.IN3
+carry => Selector3.IN1
+carry => Selector0.IN1
+carry => Selector1.IN1
+carry => Selector2.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|dds:inst1|comp:compl
+in[0] => Add0.IN12
+in[1] => Add0.IN11
+in[2] => Add0.IN10
+in[3] => Add0.IN9
+in[4] => Add0.IN8
+in[5] => Add0.IN7
+out[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|dds:inst1|mux:mux1
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+in1[0] => out.DATAA
+in1[1] => out.DATAA
+in1[2] => out.DATAA
+in1[3] => out.DATAA
+in1[4] => out.DATAA
+in1[5] => out.DATAA
+in2[0] => out.DATAB
+in2[1] => out.DATAB
+in2[2] => out.DATAB
+in2[3] => out.DATAB
+in2[4] => out.DATAB
+in2[5] => out.DATAB
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|dds:inst1|ROM:sinROM
+in[0] => rom.RADDR
+in[1] => rom.RADDR1
+in[2] => rom.RADDR2
+in[3] => rom.RADDR3
+in[4] => rom.RADDR4
+in[5] => rom.RADDR5
+out[0] <= rom.DATAOUT
+out[1] <= rom.DATAOUT1
+out[2] <= rom.DATAOUT2
+out[3] <= rom.DATAOUT3
+out[4] <= rom.DATAOUT4
+out[5] <= rom.DATAOUT5
+out[6] <= rom.DATAOUT6
+out[7] <= rom.DATAOUT7
+
+
+|lab3|dds:inst1|mux:mux2
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+in1[0] => out.DATAA
+in1[1] => out.DATAA
+in1[2] => out.DATAA
+in1[3] => out.DATAA
+in1[4] => out.DATAA
+in1[5] => out.DATAA
+in1[6] => out.DATAA
+in1[7] => out.DATAA
+in2[0] => out.DATAB
+in2[1] => out.DATAB
+in2[2] => out.DATAB
+in2[3] => out.DATAB
+in2[4] => out.DATAB
+in2[5] => out.DATAB
+in2[6] => out.DATAB
+in2[7] => out.DATAB
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|dds:inst1|SignToComp:scmp
+sign => out.OUTPUTSELECT
+sign => out.OUTPUTSELECT
+sign => out.OUTPUTSELECT
+sign => out.OUTPUTSELECT
+sign => out.OUTPUTSELECT
+sign => out.OUTPUTSELECT
+sign => out.OUTPUTSELECT
+sign => out.OUTPUTSELECT
+in[0] => out.DATAA
+in[0] => Add0.IN16
+in[1] => out.DATAA
+in[1] => Add0.IN15
+in[2] => out.DATAA
+in[2] => Add0.IN14
+in[3] => out.DATAA
+in[3] => Add0.IN13
+in[4] => out.DATAA
+in[4] => Add0.IN12
+in[5] => out.DATAA
+in[5] => Add0.IN11
+in[6] => out.DATAA
+in[6] => Add0.IN10
+in[7] => out.DATAA
+in[7] => Add0.IN9
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|mux:inst7
+sel => out.OUTPUTSELECT
+in1[0] => out.DATAA
+in2[0] => out.DATAB
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|freqDiv:inst4
+clk => clk.IN1
+rst => rst.IN1
+load => ~NO_FANOUT~
+msb => msb.IN1
+cnt[0] => cnt[0].IN1
+cnt[1] => cnt[1].IN1
+cnt[2] => cnt[2].IN1
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|freqDiv:inst4|downCounter:count
+clk => out[0].CLK
+clk => out[1].CLK
+clk => out[2].CLK
+clk => out[3].CLK
+clk => out[4].CLK
+clk => out[5].CLK
+clk => out[6].CLK
+clk => out[7].CLK
+clk => out[8].CLK
+rst => out[0].ALOAD
+rst => out[1].ALOAD
+rst => out[2].ALOAD
+rst => out[3].ALOAD
+rst => out[4].ALOAD
+rst => out[5].ALOAD
+rst => out[6].ALOAD
+rst => out[7].ALOAD
+rst => out[8].ALOAD
+base[0] => Add0.IN18
+base[1] => Add0.IN17
+base[2] => Add0.IN16
+base[3] => Add0.IN15
+base[4] => Add0.IN14
+base[5] => Add0.IN13
+base[6] => Add0.IN12
+base[7] => Add0.IN11
+base[8] => Add0.IN10
+carry <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+

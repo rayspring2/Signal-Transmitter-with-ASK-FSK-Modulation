@@ -1,0 +1,137 @@
+`timescale 1ns/1ns
+
+module shiftregister #(parameter n = 1) (
+    
+    input clk,
+    input rst,
+    input ld,
+    input [n-1:0] ld_data,
+    input shift,
+    output SerOut
+); 
+	
+    reg [n-1:0]out;
+    always @(posedge clk, posedge rst) begin
+		if (rst) begin
+			out <= 0;
+		end
+        else if(ld) begin
+            out <= ld_data;
+        end
+        else if(shift) begin
+            out = out << 1;
+        end
+		
+	end
+	assign SerOut = out[n-1];
+
+endmodule
+
+
+module cntr(clk, rst, en, ld_data, carry);
+	parameter n = 1;
+	input clk, rst;
+    input en;
+    input [n-1:0] ld_data;
+	output reg carry;
+    
+	reg [n-1:0] out;
+	always @(posedge clk, posedge rst) begin
+		if (rst) begin
+			out <= ld_data;
+		end
+        else if(carry) begin
+            out <= ld_data;
+        end
+		else if(en) begin
+			out <= out + 1;
+		end
+	end
+	assign carry = &out;
+endmodule
+
+
+module messageProcess_TOP(
+    input clk,
+    input rst,
+    input send,
+    input [4:0] msg,
+    output SerOut);
+    wire co4;
+    wire ldsh;
+    messageProcess_DP messageProcess_DP(clk, rst, ldsh, msg, co4, SerOut);
+    messageProcess_FSM messageProcess_FSM(clk, rst, send, co4, ldsh);
+
+endmodule
+
+module messageProcess_DP(
+    input clk,
+    input rst,
+    input ldsh,
+    input [4:0] msg,
+    output co4,
+    output SerOut);
+
+    wire co10;
+    cntr #(4) counter4(clk, rst, co10, 4'd5, co4); // conits for 9 times
+    cntr #(10) counter10(clk, rst, 1'b1, 10'd0, co10); 
+
+    shiftregister #(9) shiftregister(clk, rst, ldsh, {4'b0101, msg}, co10,  SerOut);
+
+
+endmodule
+
+module messageProcess_FSM(
+    input clk,
+    input rst,
+    input send,
+    input co4,
+    output reg ld
+);
+
+
+    
+	localparam A = 2'b00;
+	localparam B = 2'b01;
+	reg [1:0] ps, ns;
+	
+	always @(posedge clk, posedge rst)begin
+		if(rst)
+			ps <= A;
+		else
+			ps <= ns;
+	end
+	
+	always@(*) begin
+		case(ps)
+			A: begin
+				if(send)
+					ns <= B;
+				else
+					ns <= A;
+			end
+			
+			B: begin
+				if(co4)
+					ns <= A;
+				else
+					ns <= B;
+			end	
+		endcase
+	
+	end
+	
+	
+	always@(*)begin
+        ld = 0; 
+		case(ps)
+			A: begin
+                if(send)begin
+                    ld = 1; 
+                end
+			end
+			B: begin
+			end
+		endcase
+	end
+endmodule

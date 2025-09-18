@@ -1,0 +1,24 @@
+
+State Machine - |lab3|dds:inst1|phase_Top:phase|phase_FSM:fsm|ps
+Name ps.D ps.C ps.B ps.A 
+ps.A 0 0 0 0 
+ps.B 0 0 1 1 
+ps.C 0 1 0 1 
+ps.D 1 0 0 1 
+
+State Machine - |lab3|one_Pulser:inst15|ps
+Name ps.A ps.C ps.B 
+ps.A 0 0 0 
+ps.B 1 0 1 
+ps.C 1 1 0 
+
+State Machine - |lab3|one_Pulser:inst16|ps
+Name ps.A ps.C ps.B 
+ps.A 0 0 0 
+ps.B 1 0 1 
+ps.C 1 1 0 
+
+State Machine - |lab3|messageProcess_TOP:inst2|messageProcess_FSM:messageProcess_FSM|ps
+Name ps.B 
+ps.A 0 
+ps.B 1 

@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at message_process.v(14): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at freqDivider.v(8): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at counter.v(7): always construct contains both blocking and non-blocking assignments
